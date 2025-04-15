@@ -1,6 +1,8 @@
 # Instrument_Codes
 
-This repository contains Python instrument drivers and automation codes that I contributed to writing, specifically for Quantum Design's **PPMS DynaCool 14T** system.
+This repository contains Python instrument drivers and automation codes that I contributed to writing.
+Driver list:
+**PPMS DynaCool 14T**
 
 ---
 
