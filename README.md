@@ -12,7 +12,7 @@ Driver list:
 
 This driver is adapted from the [Qcodes repository](https://microsoft.github.io/Qcodes/drivers_api/QuantumDesign.html#qcodes.instrument_drivers.QuantumDesign.DynaCool), with modifications to support the **PPMS DynaCool 14T** system.
 
-**Note:** Different models of DynaCool systems return slightly different response formats. This code is tailored for **PPMS 14T** and may not work out-of-the-box with other models.
+**Note:** Different models of DynaCool systems return different response formats. This code is tailored for **PPMS 14T** and may not work out-of-the-box with other models.
 
 ---
 
@@ -40,7 +40,7 @@ def set_temp(target, rate, method='fast settle'):
         rate (float): Temperature ramp rate in K/min.
         method (str): Settling method, e.g., 'fast settle' or 'no overshoot'.
     """
-    dynacool.temperature_rate(rate / 60)  # Convert to K/s
+    dynacool.temperature_rate(rate / 60)  # Convert to K/min
     dynacool.temperature_setpoint(target)
     dynacool.temperature_settling(method)
 
